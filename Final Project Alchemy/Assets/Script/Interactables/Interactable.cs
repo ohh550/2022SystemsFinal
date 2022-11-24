@@ -11,24 +11,31 @@ namespace ReganAlchemy
 
         [SerializeField]
         MeshRenderer _meshRenderer;
+        [SerializeField]
+        int _materialIndex = 0;
         Material _originalMaterial;
 
         private void Start()
         {
-            _originalMaterial = _meshRenderer.material;
+            _originalMaterial = _meshRenderer.materials[_materialIndex];
         }
 
         public virtual void Highlight(bool highlighted)
         {
             if (!_meshRenderer) return;
 
+            Material[] materials = _meshRenderer.materials;
+
             if (highlighted)
             {
-                _meshRenderer.material = _highlightMaterial;
+                materials[_materialIndex] = _highlightMaterial;
+                _meshRenderer.materials = materials;
                 return;
             }
 
-            _meshRenderer.material = _originalMaterial;
+            
+            materials[_materialIndex] = _originalMaterial;
+            _meshRenderer.materials = materials;
         }
 
 

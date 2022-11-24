@@ -2,15 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Inventory : MonoBehaviour
+namespace ReganAlchemy
 {
-    int _gatheredAmount = 0;
-
-    public bool Gather()
+    public class Inventory : MonoBehaviour
     {
-        if (_gatheredAmount >= 5) return false;
-       
-        _gatheredAmount++;
-        return true;
+        int _gatheredAmount = 0;
+
+        public bool Gather()
+        {
+            if (_gatheredAmount >= 5) return false;
+
+            _gatheredAmount++;
+            return true;
+        }
     }
 }

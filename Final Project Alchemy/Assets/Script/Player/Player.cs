@@ -8,6 +8,8 @@ namespace ReganAlchemy
     {
         public Inventory inventory;
         public InteractionController InteractionController;
+
+        public Camera mainCamera;
     }
 
 }
