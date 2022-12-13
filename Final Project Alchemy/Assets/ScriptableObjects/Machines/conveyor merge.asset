@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: debd6b2799cf24248996e3b91101de25, type: 3}
+  m_Name: conveyor merge
+  m_EditorClassIdentifier: 
+  stringID: Conveyor_C
+  gamePrefab: {fileID: 8318986769742455745, guid: e3462530b5a106443818e0b3e708db78,
+    type: 3}
+  previewPrefab: {fileID: 8318986769742455745, guid: 0e9cf02b387a51f42ae722f60afd684f,
+    type: 3}
+  requiredItems:
+  - item: {fileID: 11400000, guid: aa5f5f69ff415c942934c12a86c90ba5, type: 2}
+    quantity: 2

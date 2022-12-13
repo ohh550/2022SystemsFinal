@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: debd6b2799cf24248996e3b91101de25, type: 3}
+  m_Name: Couldron
+  m_EditorClassIdentifier: 
+  stringID: Couldron_A
+  gamePrefab: {fileID: 1620805561850844118, guid: 5cebaa9c880d0bf4c9085308e1d5de1b,
+    type: 3}
+  previewPrefab: {fileID: 1620805561850844118, guid: 4548030e62b25b5498ffcc324b232a87,
+    type: 3}
+  requiredItems:
+  - item: {fileID: 11400000, guid: aa5f5f69ff415c942934c12a86c90ba5, type: 2}
+    quantity: 10
+  - item: {fileID: 11400000, guid: 9b3bb87ab2a1e5044914df4a4f5b45e0, type: 2}
+    quantity: 8
+  - item: {fileID: 11400000, guid: 0eefd5f5485cb044aaabf5208d57e153, type: 2}
+    quantity: 4

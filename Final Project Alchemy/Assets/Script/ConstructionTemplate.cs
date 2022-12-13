@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace ReganAlchemy
@@ -11,6 +9,8 @@ namespace ReganAlchemy
 
         public GameObject gamePrefab;
         public GameObject previewPrefab;
+
+        public ItemStack[] requiredItems;
 
         public static bool operator ==(ConstructionTemplate constructionTemplate1, ConstructionTemplate constructionTemplate2)
         {

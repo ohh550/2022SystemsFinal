@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: debd6b2799cf24248996e3b91101de25, type: 3}
+  m_Name: Gold Mine
+  m_EditorClassIdentifier: 
+  stringID: Mine_B
+  gamePrefab: {fileID: 1620805561850844118, guid: 53268fafd7267cd4aae1300aea648d10,
+    type: 3}
+  previewPrefab: {fileID: 1620805561850844118, guid: 1c1a9daedd0a32e468adebd9a93d78be,
+    type: 3}
+  requiredItems:
+  - item: {fileID: 11400000, guid: 9b3bb87ab2a1e5044914df4a4f5b45e0, type: 2}
+    quantity: 5
+  - item: {fileID: 11400000, guid: aa5f5f69ff415c942934c12a86c90ba5, type: 2}
+    quantity: 10

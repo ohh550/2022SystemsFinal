@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace ReganAlchemy
@@ -22,7 +19,7 @@ namespace ReganAlchemy
             bool inYRange = position.y > 0 && position.y < _gridsize;
             return inXRange && inYRange;
         }
-        
+
         private void OccupyGrid(int gridSize)
         {
             gridObjects = new GridObject[gridSize, gridSize];

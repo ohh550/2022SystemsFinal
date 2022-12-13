@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: debd6b2799cf24248996e3b91101de25, type: 3}
+  m_Name: Iron Mine
+  m_EditorClassIdentifier: 
+  stringID: Mine_A
+  gamePrefab: {fileID: 1620805561850844118, guid: e7066b87cfdef6248bc33237e8677f29,
+    type: 3}
+  previewPrefab: {fileID: 1620805561850844118, guid: ec12a3d41b9961a4ba8c95c9515247f0,
+    type: 3}
+  requiredItems:
+  - item: {fileID: 11400000, guid: 9b3bb87ab2a1e5044914df4a4f5b45e0, type: 2}
+    quantity: 2
+  - item: {fileID: 11400000, guid: aa5f5f69ff415c942934c12a86c90ba5, type: 2}
+    quantity: 8

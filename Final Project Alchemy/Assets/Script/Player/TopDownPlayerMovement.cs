@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace ReganAlchemy
@@ -8,6 +5,12 @@ namespace ReganAlchemy
     [RequireComponent(typeof(CharacterController))]
     public class TopDownPlayerMovement : MonoBehaviour
     {
+        [Header("Animation")]
+        [SerializeField]
+        Animator _animator;
+        [SerializeField]
+        Transform _characterModel;
+
         [Header("Movement")]
         [SerializeField]
         float _movementSpeed = 10;
@@ -66,10 +69,21 @@ namespace ReganAlchemy
 
             _movementInput = _movementInput.normalized;
 
+            _animator.SetBool("walking", _movementInput.sqrMagnitude > 0.1f);
+
+
+            _characterModel.localRotation = Quaternion.Euler(0, Vector2.SignedAngle(_movementInput, Vector2.up), 0);
+
             _velocity = new Vector3(
                 Mathf.Clamp(_velocity.x + _movementInput.x * _movementAcceleration * Time.deltaTime, -_movementSpeed, _movementSpeed),
                 _velocity.y,
                 Mathf.Clamp(_velocity.z + _movementInput.y * _movementAcceleration * Time.deltaTime, -_movementSpeed, _movementSpeed));
+
+            if (_characterController.isGrounded && Input.GetKey(KeyCode.Space))
+            {
+                _velocity.y += 10;
+                Debug.Log(_velocity.y);
+            }
         }
 
         private void HandleGravity()
@@ -79,7 +93,10 @@ namespace ReganAlchemy
                 _velocity.y -= _gravity * Time.deltaTime;
                 return;
             }
-            _velocity.y = -0.1f;
+
+            if (_velocity.y > 0) return;
+
+            _velocity.y = -0.5f;
         }
 
         private void HandleMovement()

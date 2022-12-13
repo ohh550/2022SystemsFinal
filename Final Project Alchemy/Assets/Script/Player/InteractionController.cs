@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace ReganAlchemy
@@ -14,6 +11,8 @@ namespace ReganAlchemy
         float _gatherRadius = 5;
         [SerializeField]
         LayerMask _interactableMask;
+        [SerializeField]
+        AudioSource _interactAudio;
 
         Interactable _highlightedInteractable = null;
 
@@ -29,6 +28,8 @@ namespace ReganAlchemy
 
             if (!_highlightedInteractable) return;
 
+            _interactAudio.Play();
+
             _highlightedInteractable.Interact(this);
         }
 
@@ -40,15 +41,15 @@ namespace ReganAlchemy
 
             if (closestInteractable == null)
             {
-                _highlightedInteractable?.Highlight(false);
+                _highlightedInteractable?.Highlight(false, this);
                 _highlightedInteractable = null;
                 return;
             }
 
             if (closestInteractable == _highlightedInteractable) return;
 
-            _highlightedInteractable?.Highlight(false);
-            closestInteractable.Highlight(true);
+            _highlightedInteractable?.Highlight(false, this);
+            closestInteractable.Highlight(true, this);
             _highlightedInteractable = closestInteractable;
         }
 
@@ -57,7 +58,7 @@ namespace ReganAlchemy
             Collider closestCollider = null;
             float closestDistance = Mathf.Infinity;
 
-            foreach(Collider collider in colliders)
+            foreach (Collider collider in colliders)
             {
                 float sqrMagnitude = (collider.transform.position - transform.position).sqrMagnitude;
 
